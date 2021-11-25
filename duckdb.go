@@ -5,7 +5,10 @@
 package duckdb
 
 /*
-#cgo LDFLAGS: -lduckdb
+//#cgo LDFLAGS:-L ${SRCDIR}/ -lduckdb
+#cgo windows LDFLAGS:-L ${SRCDIR}/ -lduckdb
+#cgo darwin LDFLAGS:-L ${SRCDIR}/dependencies_lib/duckdb-0.3.0/build/release/src/libduckdb_static.a -lduckdb
+#cgo linux LDFLAGS: -lduckdb
 #include <duckdb.h>
 */
 import "C"
