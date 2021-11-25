@@ -38,7 +38,7 @@ func (s *stmt) NumInput() int {
 		panic("database/sql/driver: misuse of duckdb driver: NumInput after Close")
 	}
 	var pc C.idx_t
-	C.duckdb_nparams(*s.stmt, &pc)
+	C.duckdb_nparams(*s.stmt)
 	return int(pc)
 }
 
