@@ -5,7 +5,6 @@
 package duckdb
 
 /*
-//#cgo LDFLAGS:-L ${SRCDIR}/ -lduckdb
 #cgo windows LDFLAGS:-L ${SRCDIR}/ -lduckdb
 #cgo darwin LDFLAGS:-L ${STATIC_LIB} -lduckdb
 #cgo linux LDFLAGS: -lduckdb
